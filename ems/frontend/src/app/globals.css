@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #F4F6F5;
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #FFFFFF;
+  --color-border: #E1E7E4;
+  --color-ink: #10201C;
+  --color-muted: #5C6E68;
+
+  --color-primary: #0B3D3A;
+  --color-primary-hover: #0F4E49;
+  --color-primary-foreground: #F4F6F5;
+
+  --color-accent: #A96B2E;
+  --color-accent-hover: #8F5A26;
+  --color-accent-foreground: #FFFFFF;
+}
+
+.dark {
+  --color-bg: #0D1512;
+  --color-surface: #142020;
+  --color-surface-raised: #17251F;
+  --color-border: #24352F;
+  --color-ink: #EAF1EC;
+  --color-muted: #8FA39B;
+
+  --color-primary: #4FB6A8;
+  --color-primary-hover: #6BC7BA;
+  --color-primary-foreground: #08201C;
+
+  --color-accent: #E0A45B;
+  --color-accent-hover: #EAB578;
+  --color-accent-foreground: #201203;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+
+/* Employee ID badge — the app's recurring signature element */
+.id-badge {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+/* Scrollbar - subtle, matches theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
