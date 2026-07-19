@@ -2,7 +2,7 @@
 
 A full-stack Employee Management System built for the Full Stack Developer hiring assignment.
 
-- **Frontend:** Next.js 14 (App Router) + TypeScript + Tailwind CSS
+- **Frontend:** Next.js + TypeScript + Tailwind CSS
 - **Backend:** Node.js + Express.js
 - **Database:** MongoDB (Mongoose)
 - **Auth:** JWT + bcrypt, role-based access control (Super Admin / HR Manager / Employee)
